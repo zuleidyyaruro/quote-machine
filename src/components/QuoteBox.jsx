@@ -11,12 +11,12 @@ const QuoteBox = ({ setColor, color }) => {
     const myArrayColors = ["#3d84b8", "#3f3697", "#04009a", "#890596", "#72147e", "#542e71", "#ce1212", "#301b3f", "#222", "#333", "#440a67", "#ff005c", "#7868e6", "#413c69", "#1e212d", "#6930c3"]
     const myRandomColor = Math.floor(Math.random() * myArrayColors.length);
 
-    const myNumeroAleatorio = Math.floor(Math.random() * Quotes.quotes.length);
-    console.log(myRandomColor)
+    const myRandomNumber = Math.floor(Math.random() * Quotes.quotes.length);
+
 
     const HandleChangeSetQuotes = () => {
-        setQuotes(Quotes.quotes[myNumeroAleatorio].quote)
-        setAuthor(Quotes.quotes[myNumeroAleatorio].author)
+        setQuotes(Quotes.quotes[myRandomNumber].quote)
+        setAuthor(Quotes.quotes[myRandomNumber].author)
         setColor(myArrayColors[myRandomColor])
     }
 
